@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 27/08/2011 09:11:02 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.modelo.RolPersona" table="rol_persona" catalog="gestion_notas">
+        <composite-id name="id" class="com.modelo.RolPersonaId">
+            <key-property name="institucion" type="int">
+                <column name="Institucion" />
+            </key-property>
+            <key-property name="rol" type="int">
+                <column name="Rol" />
+            </key-property>
+            <key-property name="persona" type="string">
+                <column name="Persona" length="20" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="rol" class="com.modelo.Rol" update="false" insert="false" fetch="select">
+            <column name="Rol" not-null="true" />
+        </many-to-one>
+        <many-to-one name="persona" class="com.modelo.Persona" update="false" insert="false" fetch="select">
+            <column name="Persona" length="20" not-null="true" />
+        </many-to-one>
+        <many-to-one name="institucion" class="com.modelo.Institucion" update="false" insert="false" fetch="select">
+            <column name="Institucion" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
