@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="gestion_notas"/>
+  <table-filter match-name="lugar"/>
+  <table-filter match-name="rol"/>
+  <table-filter match-name="rol_persona"/>
+  <table-filter match-name="persona"/>
+  <table-filter match-name="sede"/>
+  <table-filter match-name="institucion"/>
+</hibernate-reverse-engineering>
